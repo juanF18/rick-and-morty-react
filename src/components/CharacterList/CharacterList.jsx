@@ -13,10 +13,14 @@ export function CharacterList() {
     fetchData();
   }, []);
   return (
-    <>
+    <div className="container mx-auto">
       {characters.map((character) => {
-        return <Character key={character.id} character={character} />;
+        return (
+          <div>
+            <Character key={character.id} character={character} />
+          </div>
+        );
       })}
-    </>
+    </div>
   );
 }
